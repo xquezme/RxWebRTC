@@ -1,0 +1,17 @@
+platform :ios, "9.0"
+
+use_frameworks!
+
+target 'RxWebRTC_Example' do
+  pod 'RxWebRTC', :path => '../'
+  pod 'GoogleWebRTC', '1.1.22835'
+  pod 'RxSwift', '4.1.2'
+  pod 'RxCocoa', '4.1.2'
+
+  target 'RxWebRTC_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 1.2.0'
+    pod 'Nimble', '~> 7.0.2'
+  end
+end

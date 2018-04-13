@@ -1,0 +1,43 @@
+PODS:
+  - GoogleWebRTC (1.1.22835)
+  - Nimble (7.0.3)
+  - Quick (1.2.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - RxWebRTC (0.1.0):
+    - GoogleWebRTC
+    - RxCocoa (~> 4)
+    - RxSwift (~> 4)
+
+DEPENDENCIES:
+  - GoogleWebRTC (= 1.1.22835)
+  - Nimble (~> 7.0.2)
+  - Quick (~> 1.2.0)
+  - RxCocoa (= 4.1.2)
+  - RxSwift (= 4.1.2)
+  - RxWebRTC (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GoogleWebRTC
+    - Nimble
+    - Quick
+    - RxCocoa
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RxWebRTC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GoogleWebRTC: 97c21a9f19bb7ac72b890d3fa1199a15efb8e753
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  RxWebRTC: 25cfdfce53f5ed30874d9d0d8c5eb315e208070a
+
+PODFILE CHECKSUM: bd8ac7ad59050eef7b862e796a0fa0edbf5ba628
+
+COCOAPODS: 1.5.0
