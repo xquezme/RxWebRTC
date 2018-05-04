@@ -15,8 +15,6 @@ class RxRTCPeerConnectionDelegateProxy
     , DelegateProxyType
     , RTCPeerConnectionDelegate {
 
-    private weak var forwardDelegate: RTCPeerConnectionDelegate?
-
     fileprivate let signalingStateSignal = PublishSubject<RTCSignalingState>()
     fileprivate let iceConnectionStateSignal = PublishSubject<RTCIceConnectionState>()
     fileprivate let iceGatheringStateSignal = PublishSubject<RTCIceGatheringState>()
@@ -53,47 +51,47 @@ class RxRTCPeerConnectionDelegateProxy
 
     func peerConnectionShouldNegotiate(_ peerConnection: RTCPeerConnection) {
         self.shouldNegotiateSignal.onNext(())
-        self.forwardDelegate?.peerConnectionShouldNegotiate(peerConnection)
+        self.forwardToDelegate()?.peerConnectionShouldNegotiate(peerConnection)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didAdd stream: RTCMediaStream) {
         self.streamAddedSignal.onNext(stream)
-        self.forwardDelegate?.peerConnection(peerConnection, didAdd: stream)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didAdd: stream)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove stream: RTCMediaStream) {
         self.streamRemovedSignal.onNext(stream)
-        self.forwardDelegate?.peerConnection(peerConnection, didRemove: stream)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didRemove: stream)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didOpen dataChannel: RTCDataChannel) {
         self.dataChannelOpened.onNext(dataChannel)
-        self.forwardDelegate?.peerConnection(peerConnection, didOpen: dataChannel)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didOpen: dataChannel)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didGenerate candidate: RTCIceCandidate) {
         self.iceCandidateAddedSignal.onNext(candidate)
-        self.forwardDelegate?.peerConnection(peerConnection, didGenerate: candidate)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didGenerate: candidate)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didRemove candidates: [RTCIceCandidate]) {
         self.iceCandidatesRemovedSignal.onNext(candidates)
-        self.forwardDelegate?.peerConnection(peerConnection, didRemove: candidates)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didRemove: candidates)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceGatheringState) {
         self.iceGatheringStateSignal.onNext(newState)
-        self.forwardDelegate?.peerConnection(peerConnection, didChange: newState)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didChange: newState)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange newState: RTCIceConnectionState) {
         self.iceConnectionStateSignal.onNext(newState)
-        self.forwardDelegate?.peerConnection(peerConnection, didChange: newState)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didChange: newState)
     }
 
     func peerConnection(_ peerConnection: RTCPeerConnection, didChange stateChanged: RTCSignalingState) {
         self.signalingStateSignal.onNext(stateChanged)
-        self.forwardDelegate?.peerConnection(peerConnection, didChange: stateChanged)
+        self.forwardToDelegate()?.peerConnection(peerConnection, didChange: stateChanged)
     }
 
     deinit {

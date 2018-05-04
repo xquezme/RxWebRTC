@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'RxWebRTC_Example' do
   pod 'RxWebRTC', :path => '../'
-  pod 'GoogleWebRTC', '1.1.22835'
+  pod 'GoogleWebRTC', '1.1.23094'
   pod 'RxSwift', '4.1.2'
   pod 'RxCocoa', '4.1.2'
 

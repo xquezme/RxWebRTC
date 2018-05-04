@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'Foundation', 'AVFoundation'
   s.source_files = 'RxWebRTC/Classes/**/*'
 
-  s.dependency 'GoogleWebRTC'
+  s.dependency 'GoogleWebRTC', '~> 1.1.23094'
   s.dependency 'RxSwift', '~> 4'
   s.dependency 'RxCocoa', '~> 4'
 end
