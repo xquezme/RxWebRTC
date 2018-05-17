@@ -17,7 +17,7 @@ RxWebRTC is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RxWebRTC'
+pod 'RxWebRTC', '0.2.0'
 ```
 
 ## Author

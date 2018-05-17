@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RxWebRTC'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A lightweight RxSwift extension for WebRTC.'
   s.homepage         = 'https://github.com/xquezme/RxWebRTC'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
