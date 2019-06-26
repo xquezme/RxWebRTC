@@ -1,21 +1,24 @@
 PODS:
-  - GoogleWebRTC (1.1.23094)
-  - Nimble (7.0.3)
-  - Quick (1.2.0)
-  - RxCocoa (4.1.2):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.1.2)
-  - RxWebRTC (0.2.0):
-    - GoogleWebRTC (~> 1.1.23094)
-    - RxCocoa (~> 4)
-    - RxSwift (~> 4)
+  - GoogleWebRTC (1.1.28117)
+  - Nimble (8.0.2)
+  - Quick (2.1.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - RxWebRTC (0.3.0):
+    - GoogleWebRTC (>= 1.1.28117)
+    - RxCocoa
+    - RxSwift
 
 DEPENDENCIES:
-  - GoogleWebRTC (= 1.1.23094)
-  - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
-  - RxCocoa (= 4.1.2)
-  - RxSwift (= 4.1.2)
+  - GoogleWebRTC (= 1.1.28117)
+  - Nimble (= 8.0.2)
+  - Quick (= 2.1.0)
+  - RxCocoa (= 5.0.0)
+  - RxSwift (= 5.0.0)
   - RxWebRTC (from `../`)
 
 SPEC REPOS:
@@ -24,6 +27,7 @@ SPEC REPOS:
     - Nimble
     - Quick
     - RxCocoa
+    - RxRelay
     - RxSwift
 
 EXTERNAL SOURCES:
@@ -31,13 +35,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GoogleWebRTC: 4a79d5e5b2e2b3518e8f03c862b128756ceda785
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
-  RxSwift: e49536837d9901277638493ea537394d4b55f570
-  RxWebRTC: 7e69f79d618040043eb618d7e2a31a2779eb8b33
+  GoogleWebRTC: 44cdafc5140ba1e63e6944ed22cadbe269f28f88
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  RxWebRTC: 9878e5978048621641ba85c106c2757c07e84810
 
-PODFILE CHECKSUM: bef20119e9fa4377c445b4b838fc2bf46f8767ec
+PODFILE CHECKSUM: d65e111f50ede44e631cbc21097e5543da5299d7
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.7.2
